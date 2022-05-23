@@ -1,4 +1,4 @@
-package com.example.ta_aplikasi_laima
+package com.ta.ta_aplikasi_laima
 
 import io.flutter.embedding.android.FlutterActivity
 
