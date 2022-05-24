@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ta_aplikasi_laima/login.dart';
+import 'package:ta_aplikasi_laima/register.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Login(),
+      home: Register(),
     );
   }
 }
