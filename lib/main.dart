@@ -53,8 +53,8 @@ class _LoginState extends State<Login> {
   }
 
   // controller input text
-  TextEditingController user = new TextEditingController();
-  TextEditingController pass = new TextEditingController();
+  TextEditingController user = TextEditingController();
+  TextEditingController pass = TextEditingController();
 
   // prosess button submit
   Future<List?> _login() async {
@@ -126,22 +126,22 @@ class _LoginState extends State<Login> {
                 }),
             SizedBox(height: 20),
             TextFormField(
-              controller: pass,
-              obscureText: true,
-              decoration: InputDecoration(
-                hintText: "Masukkan Password",
-                labelText: "Password",
-                border: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.blue, width: 3),
-                  borderRadius: BorderRadius.circular(32.0),
+                controller: pass,
+                obscureText: true,
+                decoration: InputDecoration(
+                  hintText: "Masukkan Password",
+                  labelText: "Password",
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.blue, width: 3),
+                    borderRadius: BorderRadius.circular(32.0),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide:
+                        BorderSide(color: Colors.blueGrey.shade900, width: 1),
+                    borderRadius: BorderRadius.circular(32.0),
+                  ),
                 ),
-                enabledBorder: OutlineInputBorder(
-                  borderSide:
-                      BorderSide(color: Colors.blueGrey.shade900, width: 1),
-                  borderRadius: BorderRadius.circular(32.0),
-                ),
-              ),
-              validator: (value) {
+                validator: (value) {
                   if (value!.isEmpty) {
                     return 'Masukkan password yang valid!';
                   }
@@ -159,8 +159,7 @@ class _LoginState extends State<Login> {
                 onPressed: () {
                   _login();
                 }),
-
-                Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
