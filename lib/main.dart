@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:ta_aplikasi_laima/adminPage.dart';
-import 'package:ta_aplikasi_laima/login.dart';
+import 'package:ta_aplikasi_laima/register.dart';
 import 'package:ta_aplikasi_laima/userPage.dart';
 
 void main() {
@@ -159,6 +159,36 @@ class _LoginState extends State<Login> {
                 onPressed: () {
                   _login();
                 }),
+
+                Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  child: Text(
+                    "Belum memiliki akun?",
+                    style: TextStyle(fontSize: 15),
+                  ),
+                ),
+                Container(
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Register(),
+                        ),
+                      );
+                    },
+                    child: Text("Daftar",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 15,
+                          decoration: TextDecoration.underline,
+                        )),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
