@@ -82,48 +82,60 @@ class _RegisterState extends State<Register> {
             Container(
               height: 40,
               child: DateTimeField(
-                format: format,
-                onShowPicker: (context, currentValue) {
-                  return showDatePicker(
-                      context: context,
-                      firstDate: DateTime(1900),
-                      initialDate: currentValue ?? DateTime.now(),
-                      lastDate: DateTime(2100));
-                },
-                decoration: new InputDecoration(
-                  hintText: "Masukkan Tanggal Lahir Anda",
-                  labelText: "Tanggal Lahir",
-                  icon: Icon(Icons.calendar_view_month),
-                  border: OutlineInputBorder(
-                      borderRadius: new BorderRadius.circular(5.0)),
-                ),
-              ),
+                  format: format,
+                  onShowPicker: (context, currentValue) {
+                    return showDatePicker(
+                        context: context,
+                        firstDate: DateTime(1900),
+                        initialDate: currentValue ?? DateTime.now(),
+                        lastDate: DateTime(2100));
+                  },
+                  decoration: new InputDecoration(
+                    hintText: "Masukkan Tanggal Lahir Anda",
+                    labelText: "Tanggal Lahir",
+                    icon: Icon(Icons.calendar_view_month),
+                    border: OutlineInputBorder(
+                        borderRadius: new BorderRadius.circular(5.0)),
+                  ),
+                  validator: (value) {
+                    if (value == null) {
+                      return 'Tanggal tidak boleh kosong!';
+                    }
+                  }),
             ),
             SizedBox(height: 10),
             Container(
               height: 40,
               child: TextFormField(
-                decoration: new InputDecoration(
-                  hintText: "Masukkan Jenis Kelamin Anda",
-                  labelText: "Jenis Kelamin",
-                  icon: Icon(Icons.people),
-                  border: OutlineInputBorder(
-                      borderRadius: new BorderRadius.circular(5.0)),
-                ),
-              ),
+                  decoration: new InputDecoration(
+                    hintText: "Masukkan Jenis Kelamin Anda",
+                    labelText: "Jenis Kelamin",
+                    icon: Icon(Icons.people),
+                    border: OutlineInputBorder(
+                        borderRadius: new BorderRadius.circular(5.0)),
+                  ),
+                  validator: (value) {
+                    if (value!.isEmpty) {
+                      return 'Jenis Kelamin tidak boleh kosong!';
+                    }
+                  }),
             ),
             SizedBox(height: 10),
             Container(
               height: 40,
               child: TextFormField(
-                decoration: new InputDecoration(
-                  hintText: "Masukkan Alamat Anda",
-                  labelText: "Alamat",
-                  icon: Icon(Icons.home_outlined),
-                  border: OutlineInputBorder(
-                      borderRadius: new BorderRadius.circular(5.0)),
-                ),
-              ),
+                  decoration: new InputDecoration(
+                    hintText: "Masukkan Alamat Anda",
+                    labelText: "Alamat",
+                    icon: Icon(Icons.home_outlined),
+                    border: OutlineInputBorder(
+                        borderRadius: new BorderRadius.circular(5.0)),
+                  ),
+                  validator: (value) {
+                    if (value!.isEmpty) {
+                      return 'Alamat tidak boleh kosong!';
+                    }
+                  }),
             ),
             SizedBox(height: 10),
             Row(
@@ -133,13 +145,17 @@ class _RegisterState extends State<Register> {
                   width: 60,
                   margin: EdgeInsets.only(left: 40),
                   child: TextFormField(
-                    keyboardType: TextInputType.number,
-                    decoration: new InputDecoration(
-                      labelText: "RT",
-                      border: OutlineInputBorder(
-                          borderRadius: new BorderRadius.circular(5.0)),
-                    ),
-                  ),
+                      keyboardType: TextInputType.number,
+                      decoration: new InputDecoration(
+                        labelText: "RT",
+                        border: OutlineInputBorder(
+                            borderRadius: new BorderRadius.circular(5.0)),
+                      ),
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'RT kosong!';
+                        }
+                      }),
                 ),
                 Container(
                   margin: EdgeInsets.only(left: 20),
@@ -150,13 +166,17 @@ class _RegisterState extends State<Register> {
                   width: 60,
                   margin: EdgeInsets.only(left: 20),
                   child: TextFormField(
-                    keyboardType: TextInputType.number,
-                    decoration: new InputDecoration(
-                      labelText: "RW",
-                      border: OutlineInputBorder(
-                          borderRadius: new BorderRadius.circular(5.0)),
-                    ),
-                  ),
+                      keyboardType: TextInputType.number,
+                      decoration: new InputDecoration(
+                        labelText: "RW",
+                        border: OutlineInputBorder(
+                            borderRadius: new BorderRadius.circular(5.0)),
+                      ),
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'RW kosong!';
+                        }
+                      }),
                 ),
               ],
             ),
@@ -165,54 +185,70 @@ class _RegisterState extends State<Register> {
               height: 40,
               margin: EdgeInsets.only(left: 40),
               child: TextFormField(
-                decoration: new InputDecoration(
-                  hintText: "Masukkan Kel/Desa Anda",
-                  labelText: "Kelurahan/Desa",
-                  border: OutlineInputBorder(
-                      borderRadius: new BorderRadius.circular(5.0)),
-                ),
-              ),
+                  decoration: new InputDecoration(
+                    hintText: "Masukkan Kel/Desa Anda",
+                    labelText: "Kelurahan/Desa",
+                    border: OutlineInputBorder(
+                        borderRadius: new BorderRadius.circular(5.0)),
+                  ),
+                  validator: (value) {
+                    if (value!.isEmpty) {
+                      return 'Kel/Des tidak boleh kosong!';
+                    }
+                  }),
             ),
             SizedBox(height: 10),
             Container(
               height: 40,
               margin: EdgeInsets.only(left: 40),
               child: TextFormField(
-                decoration: new InputDecoration(
-                  hintText: "Masukkan Kecamatan Anda",
-                  labelText: "Kecamatan",
-                  border: OutlineInputBorder(
-                      borderRadius: new BorderRadius.circular(5.0)),
-                ),
-              ),
+                  decoration: new InputDecoration(
+                    hintText: "Masukkan Kecamatan Anda",
+                    labelText: "Kecamatan",
+                    border: OutlineInputBorder(
+                        borderRadius: new BorderRadius.circular(5.0)),
+                  ),
+                  validator: (value) {
+                    if (value!.isEmpty) {
+                      return 'Kecamatam tidak boleh kosong!';
+                    }
+                  }),
             ),
             SizedBox(height: 10),
             Container(
               height: 40,
               child: TextFormField(
-                keyboardType: TextInputType.emailAddress,
-                decoration: new InputDecoration(
-                  hintText: "Masukkan Email Anda",
-                  labelText: "Email",
-                  icon: Icon(Icons.mail),
-                  border: OutlineInputBorder(
-                      borderRadius: new BorderRadius.circular(5.0)),
-                ),
-              ),
+                  keyboardType: TextInputType.emailAddress,
+                  decoration: new InputDecoration(
+                    hintText: "Masukkan Email Anda",
+                    labelText: "Email",
+                    icon: Icon(Icons.mail),
+                    border: OutlineInputBorder(
+                        borderRadius: new BorderRadius.circular(5.0)),
+                  ),
+                  validator: (value) {
+                    if (value!.isEmpty) {
+                      return 'Email tidak boleh kosong!';
+                    }
+                  }),
             ),
             SizedBox(height: 10),
             Container(
               height: 40,
               child: TextFormField(
-                obscureText: true,
-                decoration: new InputDecoration(
-                  hintText: "Masukkan Password Anda",
-                  labelText: "Password",
-                  icon: Icon(Icons.password_outlined),
-                  border: OutlineInputBorder(
-                      borderRadius: new BorderRadius.circular(5.0)),
-                ),
-              ),
+                  obscureText: true,
+                  decoration: new InputDecoration(
+                    hintText: "Masukkan Password Anda",
+                    labelText: "Password",
+                    icon: Icon(Icons.password_outlined),
+                    border: OutlineInputBorder(
+                        borderRadius: new BorderRadius.circular(5.0)),
+                  ),
+                  validator: (value) {
+                    if (value!.isEmpty) {
+                      return 'Password tidak boleh kosong!';
+                    }
+                  }),
             ),
             SizedBox(height: 10),
             ElevatedButton(
