@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ta_aplikasi_laima/login.dart';
 import 'package:ta_aplikasi_laima/register.dart';
+import 'package:ta_aplikasi_laima/damkar.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Register(),
+      home: Damkar(),
     );
   }
 }
