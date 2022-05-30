@@ -12,9 +12,9 @@ class _DamkarState extends State<Damkar> {
     return Scaffold(
       appBar: new AppBar(
         title: Text("Layanan Damkar"),
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.green[700],
       ),
-      backgroundColor: Colors.green[100],
+      backgroundColor: Colors.green[200],
       body: Container(
           padding: EdgeInsets.all(30.0),
           child: GridView.count(
@@ -35,10 +35,12 @@ class _DamkarState extends State<Damkar> {
                             mainAxisSize: MainAxisSize.min,
                             children: <Widget>[
                               Icon(
-                                Icons.home,
+                                Icons.call_outlined,
+                                color: Colors.red,
                                 size: 70.0,
                               ),
-                              Text("Home", style: new TextStyle(fontSize: 17.0))
+                              Text("Call Now",
+                                  style: new TextStyle(fontSize: 17.0))
                             ],
                           ),
                         ),
@@ -57,10 +59,12 @@ class _DamkarState extends State<Damkar> {
                             mainAxisSize: MainAxisSize.min,
                             children: <Widget>[
                               Icon(
-                                Icons.home,
+                                Icons.map_outlined,
+                                color: Colors.blue[800],
                                 size: 70.0,
                               ),
-                              Text("Home", style: new TextStyle(fontSize: 17.0))
+                              Text("Lokasi Kantor",
+                                  style: new TextStyle(fontSize: 17.0))
                             ],
                           ),
                         ),
