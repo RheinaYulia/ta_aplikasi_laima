@@ -1,17 +1,17 @@
 import 'dart:html';
 import 'package:flutter/material.dart';
 
-class Damkar extends StatefulWidget {
+class Bpbd extends StatefulWidget {
   @override
-  State<Damkar> createState() => _DamkarState();
+  State<Bpbd> createState() => _BpbdState();
 }
 
-class _DamkarState extends State<Damkar> {
+class _BpbdState extends State<Bpbd> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: new AppBar(
-        title: Text("Layanan Damkar"),
+        title: Text("Layanan BPBD"),
         backgroundColor: Colors.green[700],
       ),
       backgroundColor: Colors.green[200],
@@ -87,7 +87,7 @@ class _DamkarState extends State<Damkar> {
                                 color: Colors.yellow[700],
                                 size: 70.0,
                               ),
-                              Text("Tentang Damkar",
+                              Text("Tentang BPBD",
                                   style: new TextStyle(fontSize: 17.0))
                             ],
                           ),
