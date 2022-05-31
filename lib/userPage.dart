@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:ta_aplikasi_laima/ambulans.dart';
+import 'package:ta_aplikasi_laima/bpbd.dart';
+import 'package:ta_aplikasi_laima/damkar.dart';
 import 'package:ta_aplikasi_laima/main.dart';
+import 'package:ta_aplikasi_laima/pln.dart';
+import 'package:ta_aplikasi_laima/police.dart';
 
 class UserPage extends StatelessWidget {
   UserPage({this.username});
@@ -93,7 +98,14 @@ class UserPage extends StatelessWidget {
           Card(
             margin: const EdgeInsets.all(8),
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Damkar(),
+                  ),
+                );
+              },
               splashColor: Colors.blueGrey,
               child: Center(
                 child: Column(
@@ -113,7 +125,14 @@ class UserPage extends StatelessWidget {
           Card(
             margin: const EdgeInsets.all(8),
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Ambulans(),
+                  ),
+                );
+              },
               splashColor: Colors.blueGrey,
               child: Center(
                 child: Column(
@@ -134,7 +153,14 @@ class UserPage extends StatelessWidget {
           Card(
             margin: const EdgeInsets.all(8),
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Police(),
+                  ),
+                );
+              },
               splashColor: Colors.blueGrey,
               child: Center(
                 child: Column(
@@ -154,7 +180,14 @@ class UserPage extends StatelessWidget {
           Card(
             margin: const EdgeInsets.all(8),
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Bpbd(),
+                  ),
+                );
+              },
               splashColor: Colors.blueGrey,
               child: Center(
                 child: Column(
@@ -174,7 +207,14 @@ class UserPage extends StatelessWidget {
           Card(
             margin: const EdgeInsets.all(8),
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PLN(),
+                  ),
+                );
+              },
               splashColor: Colors.blueGrey,
               child: Center(
                 child: Column(
