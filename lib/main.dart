@@ -55,6 +55,7 @@ class _LoginState extends State<Login> {
   // controller input text
   TextEditingController user = TextEditingController();
   TextEditingController pass = TextEditingController();
+  String _level = "member";
 
   // prosess button submit
   Future<List?> _login() async {
@@ -63,6 +64,7 @@ class _LoginState extends State<Login> {
         body: {
           "username": user.text,
           "password": pass.text,
+          "level" : _level,
         });
     var datauser = json.decode(response.body);
     if (datauser.length == 0) {
@@ -107,8 +109,8 @@ class _LoginState extends State<Login> {
             TextFormField(
                 controller: user,
                 decoration: InputDecoration(
-                  hintText: "Masukkan Nama",
-                  labelText: "Nama",
+                  hintText: "Masukkan username",
+                  labelText: "Username",
                   border: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.blue, width: 3),
                     borderRadius: BorderRadius.circular(32.0),
@@ -121,7 +123,7 @@ class _LoginState extends State<Login> {
                 ),
                 validator: (value) {
                   if (value!.isEmpty) {
-                    return 'Masukkan email yang valid!';
+                    return 'Masukkan username yang valid!';
                   }
                 }),
             SizedBox(height: 20),
