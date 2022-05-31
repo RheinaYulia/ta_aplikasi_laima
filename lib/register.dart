@@ -104,14 +104,20 @@ class _RegisterState extends State<Register> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("Register",
-                  style: TextStyle(
-                      fontSize: 20,
+              SizedBox(
+                height: 10,
+              ),
+              Center(
+                child: Text("Register",
+                    style: TextStyle(
+                      fontSize: 30,
                       color: Color.fromARGB(255, 14, 56, 16),
-                      fontWeight: FontWeight.bold)),
-              SizedBox(height: 10),
+                    )),
+              ),
+
+              SizedBox(height: 20),
               Container(
-                height: 60,
+                height: 70,
                 child: TextFormField(
                     controller: nik,
                     maxLength: 16,
