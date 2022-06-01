@@ -82,36 +82,6 @@ class _RegisterState extends State<Register> {
           TextFormField(
             keyboardType: TextInputType.phone,
             decoration: new InputDecoration(
-              hintText: "Masukkan RT/RW Anda",
-              labelText: "RT/RW",
-              border: OutlineInputBorder(
-                  borderRadius: new BorderRadius.circular(5.0)),
-            ),
-          ),
-          SizedBox(height: 10),
-          TextFormField(
-            keyboardType: TextInputType.phone,
-            decoration: new InputDecoration(
-              hintText: "Masukkan Kel/Desa Anda",
-              labelText: "Kelurahan/Desa",
-              border: OutlineInputBorder(
-                  borderRadius: new BorderRadius.circular(5.0)),
-            ),
-          ),
-          SizedBox(height: 10),
-          TextFormField(
-            keyboardType: TextInputType.phone,
-            decoration: new InputDecoration(
-              hintText: "Masukkan Kecamatan Anda",
-              labelText: "Kecamatan",
-              border: OutlineInputBorder(
-                  borderRadius: new BorderRadius.circular(5.0)),
-            ),
-          ),
-          SizedBox(height: 10),
-          TextFormField(
-            keyboardType: TextInputType.phone,
-            decoration: new InputDecoration(
               hintText: "Masukkan Email Anda",
               labelText: "Email",
               icon: Icon(Icons.mail),
