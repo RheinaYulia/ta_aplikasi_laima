@@ -1,0 +1,10 @@
+Keterangan :
+
+Karena database Menggunakan MYSQL dan server yang digunakan adalah menggunakan IP ADDRESS dari wifi yang sedang digunakan.
+Maka, Aplikasi dapat digunakan dengan database apabila IP ADDRESS nya sesuai dengan IP ADDRESS dari wifi masing-masing.
+
+contoh pada "http://192.168.43.71/ta_aplikasi_laima/create.php". 
+saya menggunakan wifi yang IP ADDRESS nya adalah "192.168.43.71"
+untuk menjalankan di wifi yang berbeda maka IP ADDRESS nya juga berbeda.
+
+TERIMAKASIH.
