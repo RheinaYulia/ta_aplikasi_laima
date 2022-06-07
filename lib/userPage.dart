@@ -70,8 +70,8 @@ class UserPage extends StatelessWidget {
                 },
               ),
               ListTile(
-                leading: const Icon(Icons.tty),
-                title: const Text("Lapor"),
+                leading: const Icon(Icons.roofing),
+                title: const Text("Tentang"),
                 onTap: () {},
               ),
               ListTile(
