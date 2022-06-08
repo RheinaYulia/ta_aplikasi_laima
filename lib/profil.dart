@@ -61,6 +61,7 @@ class Profil extends StatelessWidget {
                   ),
               ],
             ),
+            //NIK
             Container(
                         color: Color.fromARGB(255, 190, 233, 192),
                         padding: EdgeInsets.all(10.0),
@@ -85,6 +86,7 @@ class Profil extends StatelessWidget {
                           ],
                         ),
                       ),
+                      //email
                       Container(
                         color: Color.fromARGB(255, 190, 233, 192),
                         padding: EdgeInsets.all(10.0),
@@ -109,6 +111,7 @@ class Profil extends StatelessWidget {
                           ],
                         ),
                       ),
+                      // tanggal lahir
                       Container(
                         color: Color.fromARGB(255, 190, 233, 192),
                         padding: EdgeInsets.all(10.0),
@@ -116,14 +119,14 @@ class Profil extends StatelessWidget {
                         child: Row(
                           children: <Widget>[
                             Icon(
-                              Icons.email,
+                              Icons.calendar_view_month,
                               color: Colors.green,
                             ),
                             SizedBox(
                               width: 10.0,
                             ),
                             Text(
-                              'stefan123@gmail.com',
+                              '08-juni-2022',
                               style: TextStyle(
                                 color: Colors.grey,
                                 fontWeight: FontWeight.bold,
