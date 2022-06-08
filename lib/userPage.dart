@@ -5,6 +5,7 @@ import 'package:ta_aplikasi_laima/damkar.dart';
 import 'package:ta_aplikasi_laima/main.dart';
 import 'package:ta_aplikasi_laima/pln.dart';
 import 'package:ta_aplikasi_laima/police.dart';
+import 'package:ta_aplikasi_laima/profil.dart';
 
 class UserPage extends StatelessWidget {
   UserPage({this.username});
@@ -51,16 +52,15 @@ class UserPage extends StatelessWidget {
                         ),
                       ],
                     ),
-
-                    // const Text("Berita Viral",
-                    // style: TextStyle(color: Colors.white, fontSize: 20),),
                   ],
                 ),
               ),
               ListTile(
                 leading: const Icon(Icons.people),
                 title: const Text("Profil"),
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Profil()));
+                },
               ),
               ListTile(
                 leading: const Icon(Icons.home),
