@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ta_aplikasi_laima/userPage.dart';
 
 class Profil extends StatelessWidget {
   const Profil({Key? key}) : super(key: key);
@@ -136,6 +137,19 @@ class Profil extends StatelessWidget {
                           ],
                         ),
                       ),
+            SizedBox(height: 10),
+              ElevatedButton(
+                  child: Text("Kembali",
+                      style: TextStyle(color: Colors.black, fontSize: 17)),
+                  style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.only(right: 30, left: 30),
+                    primary: Colors.greenAccent,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(16.0))),
+                  ),
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => UserPage()));
+                  }),
           ], 
         ),
       ),
