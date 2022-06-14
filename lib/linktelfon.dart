@@ -37,11 +37,12 @@ class _MainPageState extends State<MainPage> {
             children: [
               buildButton(
                 text: 'Open Link',
-                onClicked: () => Utils.openLink(url: 'http://flutter.dev'),
+                onClicked: () =>
+                    Utillinktelfon.openLink(url: 'http://flutter.dev'),
               ),
               buildButton(
                 text: 'Open Email',
-                onClicked: () => Utils.openEmail(
+                onClicked: () => Utillinktelfon.openEmail(
                   toEmail: 'example@gmail.com',
                   subject: 'Hello World',
                   body: 'This works great!',
