@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:ta_aplikasi_laima/utillinktelfon.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  final String title = 'Url Launcher';
+class Link extends StatelessWidget {
+  final String title = 'Hubungi Layanan';
 
   @override
   Widget build(BuildContext context) => MaterialApp(
         title: title,
-        theme: ThemeData(primarySwatch: Colors.deepOrange),
+        theme: ThemeData(primarySwatch: Colors.green),
         home: MainPage(title: title),
       );
 }
@@ -18,7 +16,7 @@ class MainPage extends StatefulWidget {
   final String title;
 
   const MainPage({
-    @required this.title,
+    required this.title,
   });
 
   @override
@@ -36,18 +34,6 @@ class _MainPageState extends State<MainPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               buildButton(
-                text: 'Open Link',
-                onClicked: () => Utils.openLink(url: 'http://flutter.dev'),
-              ),
-              buildButton(
-                text: 'Open Email',
-                onClicked: () => Utils.openEmail(
-                  toEmail: 'example@gmail.com',
-                  subject: 'Hello World',
-                  body: 'This works great!',
-                ),
-              ),
-              buildButton(
                 text: 'Open Call',
                 onClicked: () =>
                     Utillinktelfon.openPhoneCall(phoneNumber: '+4912388128311'),
@@ -57,14 +43,22 @@ class _MainPageState extends State<MainPage> {
                 onClicked: () =>
                     Utillinktelfon.openSMS(phoneNumber: '+4912388128311'),
               ),
+              buildButton(
+                text: 'Open Email',
+                onClicked: () => Utillinktelfon.openEmail(
+                  toEmail: 'example@gmail.com',
+                  subject: 'Hello World',
+                  body: 'This works great!',
+                ),
+              ),
             ],
           ),
         ),
       );
 
   Widget buildButton({
-    @required String text,
-    @required VoidCallback onClicked,
+    required String text,
+    required VoidCallback onClicked,
   }) =>
       Container(
         padding: EdgeInsets.symmetric(vertical: 12),
@@ -75,7 +69,7 @@ class _MainPageState extends State<MainPage> {
           textColor: Colors.white,
           child: Text(
             text,
-            style: TextStyle(fontSize: 24),
+            style: TextStyle(fontSize: 20),
           ),
         ),
       );
