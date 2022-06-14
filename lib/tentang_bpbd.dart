@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class TentangPolisi extends StatefulWidget {
+class TentangBpbd extends StatefulWidget {
   @override
-  State<TentangPolisi> createState() => _TentangPolisiState();
+  State<TentangBpbd> createState() => _TentangBpbdState();
 }
 
-class _TentangPolisiState extends State<TentangPolisi> {
+class _TentangBpbdState extends State<TentangBpbd> {
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class _TentangPolisiState extends State<TentangPolisi> {
         backgroundColor: Colors.white,
         centerTitle: true,
         title: Text(
-          "Polisi Kota Malang",
+          "BPBD",
           style: TextStyle(
             color: Colors.black
           ),
