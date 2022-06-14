@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ta_aplikasi_laima/utillinktelfon.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
+class Link extends StatelessWidget {
   final String title = 'Url Launcher';
 
   @override
@@ -18,7 +16,7 @@ class MainPage extends StatefulWidget {
   final String title;
 
   const MainPage({
-    @required this.title,
+    required this.title,
   });
 
   @override
@@ -64,8 +62,8 @@ class _MainPageState extends State<MainPage> {
       );
 
   Widget buildButton({
-    @required String text,
-    @required VoidCallback onClicked,
+    required String text,
+    required VoidCallback onClicked,
   }) =>
       Container(
         padding: EdgeInsets.symmetric(vertical: 12),
