@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ta_aplikasi_laima/utillinktelfon.dart';
 
 class Link extends StatelessWidget {
-  final String title = 'Hubungi Layanan';
+  final String title = 'Hubungi Layanan Damkar';
 
   @override
   Widget build(BuildContext context) => MaterialApp(
@@ -36,12 +36,12 @@ class _MainPageState extends State<MainPage> {
               buildButton(
                 text: 'Open Call',
                 onClicked: () =>
-                    Utillinktelfon.openPhoneCall(phoneNumber: '+4912388128311'),
+                    Utillinktelfon.openPhoneCall(phoneNumber: '+0341325900'),
               ),
               buildButton(
                 text: 'Open SMS',
                 onClicked: () =>
-                    Utillinktelfon.openSMS(phoneNumber: '+4912388128311'),
+                    Utillinktelfon.openSMS(phoneNumber: '+0341325900'),
               ),
               buildButton(
                 text: 'Open Email',

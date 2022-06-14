@@ -6,7 +6,7 @@ import 'package:ta_aplikasi_laima/adminPage.dart';
 import 'package:ta_aplikasi_laima/register.dart';
 import 'package:ta_aplikasi_laima/userPage.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:ta_aplikasi_laima/linktelfon.dart';
+import 'package:ta_aplikasi_laima/linkdamkar.dart';
 
 void main() {
   runApp(MyApp());
