@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ta_aplikasi_laima/utillinktelfon.dart';
 
 class Link extends StatelessWidget {
-  final String title = 'Hubungi Damkar';
+  final String title = 'Hubungi Layanan';
 
   @override
   Widget build(BuildContext context) => MaterialApp(
