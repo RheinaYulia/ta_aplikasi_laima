@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:ta_aplikasi_laima/utillinktelfon.dart';
 
 class Link extends StatelessWidget {
-  final String title = 'Url Launcher';
+  final String title = 'Hubungi Damkar';
 
   @override
   Widget build(BuildContext context) => MaterialApp(
         title: title,
-        theme: ThemeData(primarySwatch: Colors.deepOrange),
+        theme: ThemeData(primarySwatch: Colors.green),
         home: MainPage(title: title),
       );
 }
@@ -34,19 +34,6 @@ class _MainPageState extends State<MainPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               buildButton(
-                text: 'Open Link',
-                onClicked: () =>
-                    Utillinktelfon.openLink(url: 'http://flutter.dev'),
-              ),
-              buildButton(
-                text: 'Open Email',
-                onClicked: () => Utillinktelfon.openEmail(
-                  toEmail: 'example@gmail.com',
-                  subject: 'Hello World',
-                  body: 'This works great!',
-                ),
-              ),
-              buildButton(
                 text: 'Open Call',
                 onClicked: () =>
                     Utillinktelfon.openPhoneCall(phoneNumber: '+4912388128311'),
@@ -55,6 +42,14 @@ class _MainPageState extends State<MainPage> {
                 text: 'Open SMS',
                 onClicked: () =>
                     Utillinktelfon.openSMS(phoneNumber: '+4912388128311'),
+              ),
+              buildButton(
+                text: 'Open Email',
+                onClicked: () => Utillinktelfon.openEmail(
+                  toEmail: 'example@gmail.com',
+                  subject: 'Hello World',
+                  body: 'This works great!',
+                ),
               ),
             ],
           ),
@@ -74,7 +69,7 @@ class _MainPageState extends State<MainPage> {
           textColor: Colors.white,
           child: Text(
             text,
-            style: TextStyle(fontSize: 24),
+            style: TextStyle(fontSize: 20),
           ),
         ),
       );
