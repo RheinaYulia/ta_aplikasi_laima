@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ta_aplikasi_laima/LokasiKantor/LokDamkar.dart';
 
 class Damkar extends StatefulWidget {
   @override
@@ -50,7 +51,14 @@ class _DamkarState extends State<Damkar> {
               child: Card(
                 margin: EdgeInsets.all(8.0),
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LokDamkar(),
+                      ),
+                    );
+                  },
                   splashColor: Colors.green,
                   child: Center(
                     child: Column(
