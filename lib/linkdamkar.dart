@@ -62,11 +62,8 @@ class _MainPageState extends State<MainPage> {
   }) =>
       Container(
         padding: EdgeInsets.symmetric(vertical: 12),
-        child: RaisedButton(
-          shape: StadiumBorder(),
+        child: ElevatedButton(
           onPressed: onClicked,
-          color: Colors.red,
-          textColor: Colors.white,
           child: Text(
             text,
             style: TextStyle(fontSize: 20),

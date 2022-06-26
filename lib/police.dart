@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ta_aplikasi_laima/LokasiKantor/LokPolice.dart';
 
 class Police extends StatefulWidget {
   const Police({Key? key}) : super(key: key);
@@ -52,7 +53,14 @@ class _PoliceState extends State<Police> {
               child: Card(
                 margin: EdgeInsets.all(8.0),
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LokPolice(),
+                      ),
+                    );
+                  },
                   splashColor: Colors.green,
                   child: Center(
                     child: Column(

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ta_aplikasi_laima/tentang_ambulans.dart';
+
 
 class Ambulans extends StatefulWidget {
   @override
@@ -73,7 +75,14 @@ class _AmbulansState extends State<Ambulans> {
               child: Card(
                 margin: EdgeInsets.all(8.0),
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                     Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => TentangAmbulan(),
+                      ),
+                    );
+                  },
                   splashColor: Colors.green,
                   child: Center(
                     child: Column(
