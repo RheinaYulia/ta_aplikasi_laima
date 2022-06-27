@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class TentangPln extends StatefulWidget {
+class TentangLaima extends StatefulWidget {
   @override
-  State<TentangPln> createState() => _TentangPlnState();
+  State<TentangLaima> createState() => _TentangLaimaState();
 }
-//coba
-class _TentangPlnState extends State<TentangPln> {
+
+class _TentangLaimaState extends State<TentangLaima> {
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class _TentangPlnState extends State<TentangPln> {
           tooltip: "Kembali",
           onPressed:null,
           ),
-          title: Text("PLN"),
+          title: Text("LAIMA"),
           backgroundColor: Colors.green[700],
       ),
       body: Container(
@@ -31,9 +31,9 @@ class _TentangPlnState extends State<TentangPln> {
           margin: EdgeInsets.all(40),
           child: Column(
             children: [
-              Image.asset('assets/images/PLNMalang.jpg',width: 400,),
-              Text("PLN (Perusahaan Listrik Negara)", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold,fontSize: 30),),
-              Text("PT. PLN (Persero) merupakan suatu badan usaha milik negara (BUMN) dibidang kelistrikan yang melayani masyarakat diseluruh nusantara, bertekad untuk memberikan pelayanan jasa ketenagalistrikan yang terbaik dan memenuhi standar ketenagalistrikan yang dapat diterima di dunia internasional.", textAlign: TextAlign.center,),
+              Image.asset('assets/images/LAIMA.png',width: 400,),
+              Text("LAIMA (Layanan Masyarakat Kota Malang)", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold,fontSize: 30),),
+              Text("Aplikasi LAIMA merupakan aplikasi pelayanan publik Kota Malang dalam satu portal yang berbasis android.", textAlign: TextAlign.center,),
 
             ],
             
