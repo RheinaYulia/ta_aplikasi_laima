@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ta_aplikasi_laima/LokasiKantor/LokPLN.dart';
+import 'package:ta_aplikasi_laima/linkpln.dart';
+import 'package:ta_aplikasi_laima/tentang_pln.dart';
 
 class PLN extends StatefulWidget {
   const PLN({Key? key}) : super(key: key);
@@ -27,7 +30,14 @@ class _PLNState extends State<PLN> {
                 child: Card(
                   margin: EdgeInsets.all(8.0),
                   child: InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LinkPLN(),
+                      ),
+                    );
+                    },
                     splashColor: Colors.green,
                     child: Center(
                       child: Column(
@@ -52,7 +62,14 @@ class _PLNState extends State<PLN> {
               child: Card(
                 margin: EdgeInsets.all(8.0),
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LokPLN(),
+                      ),
+                    );
+                  },
                   splashColor: Colors.green,
                   child: Center(
                     child: Column(
@@ -77,7 +94,14 @@ class _PLNState extends State<PLN> {
               child: Card(
                 margin: EdgeInsets.all(8.0),
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => TentangPln(),
+                      ),
+                    );
+                  },
                   splashColor: Colors.green,
                   child: Center(
                     child: Column(

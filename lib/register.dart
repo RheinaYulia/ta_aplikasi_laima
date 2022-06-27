@@ -36,7 +36,7 @@ class _RegisterState extends State<Register> {
 
   Future _daftar() async {
     final response = await http.post(
-        Uri.parse("http://192.168.43.71/ta_aplikasi_laima/create.php"),
+        Uri.parse("http://192.168.1.30/ta_aplikasi_laima/create.php"),
         body: {
           "nik": nik.text,
           "nama": nama.text,

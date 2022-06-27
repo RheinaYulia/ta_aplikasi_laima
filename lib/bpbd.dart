@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ta_aplikasi_laima/LokasiKantor/LokBPBD.dart';
+import 'package:ta_aplikasi_laima/linkbpbd.dart';
 import 'package:ta_aplikasi_laima/tentang_bpbd.dart';
 
 class Bpbd extends StatefulWidget {
@@ -26,7 +27,14 @@ class _BpbdState extends State<Bpbd> {
               child: Card(
                 margin: EdgeInsets.all(8.0),
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Linkbpbd(),
+                      ),
+                    );
+                  },
                   splashColor: Colors.green,
                   child: Center(
                     child: Column(

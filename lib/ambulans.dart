@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ta_aplikasi_laima/LokasiKantor/LokAmbulance.dart';
+import 'package:ta_aplikasi_laima/linkambulans.dart';
 import 'package:ta_aplikasi_laima/tentang_ambulans.dart';
 
 
@@ -26,7 +28,14 @@ class _AmbulansState extends State<Ambulans> {
               child: Card(
                 margin: EdgeInsets.all(8.0),
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Linkambulans(),
+                      ),
+                    );
+                  },
                   splashColor: Colors.green,
                   child: Center(
                     child: Column(
@@ -50,7 +59,14 @@ class _AmbulansState extends State<Ambulans> {
               child: Card(
                 margin: EdgeInsets.all(8.0),
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LokAmbulance(),
+                      ),
+                    );
+                  },
                   splashColor: Colors.green,
                   child: Center(
                     child: Column(

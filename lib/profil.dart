@@ -4,11 +4,15 @@ import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:intl/intl.dart';
+import 'package:ta_aplikasi_laima/main.dart';
 import 'package:ta_aplikasi_laima/userPage.dart';
 import 'package:http/http.dart' as http;
 
 class Profil extends StatefulWidget {
-  const Profil({Key? key}) : super(key: key);
+  Profil({required this.id});
+    
+      String id;
+    
 
   @override
   State<Profil> createState() => _ProfilState();
@@ -27,6 +31,7 @@ class _ProfilState extends State<Profil> {
   TextEditingController pass = TextEditingController();
 
   String _level = "member";
+  
 
   // Validasi input
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
@@ -36,9 +41,39 @@ class _ProfilState extends State<Profil> {
   // format tanggal
   final format = DateFormat("yyyy-MM-dd");
 
+  @override
+      void initState() {
+        super.initState();
+        //in first time, this method will be executed
+        _getData();
+      }
+    
+      //Http to get detail data
+      Future _getData() async {
+        try {
+          final response = await http.get(Uri.parse(
+              //you have to take the ip address of your computer.
+              //because using localhost will cause an error
+              //get detail data with id
+              "http://192.168.43.71/ta_aplikasi_laima/detail.php?id='${widget.id}'"));
+    
+          // if response successful
+          if (response.statusCode == 200) {
+            final data = jsonDecode(response.body);
+    
+            setState(() {
+              nik = TextEditingController(text: data['nik']);
+              nama = TextEditingController(text: data['nama']);
+            });
+          }
+        } catch (e) {
+          print(e);
+        }
+      }
+
   Future _daftar() async {
     final response = await http.post(
-        Uri.parse("http://192.168.43.71/ta_aplikasi_laima/create.php"),
+        Uri.parse("http://192.168.43.71/ta_aplikasi_laima/detail.php"),
         body: {
           "nik": nik.text,
           "nama": nama.text,
@@ -111,6 +146,7 @@ class _ProfilState extends State<Profil> {
           ],
         ),
         body: SingleChildScrollView(
+          
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -129,7 +165,7 @@ class _ProfilState extends State<Profil> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Text('Stefan',
+                        Text('$id',
                             style: TextStyle(
                                 fontSize: 28,
                                 color: Colors.white,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ta_aplikasi_laima/utillinktelfon.dart';
 
-class Link extends StatelessWidget {
+class LinkPLN extends StatelessWidget {
   final String title = 'Hubungi Layanan PLN Malang';
 
   @override

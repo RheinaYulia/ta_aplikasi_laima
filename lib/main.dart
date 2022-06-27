@@ -13,6 +13,8 @@ void main() {
 }
 
 String username = '';
+String keldes = '';
+String id = '';
 
 class MyApp extends StatelessWidget {
   @override
@@ -24,9 +26,12 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         '/AdminPage': (BuildContext context) => AdminPage(
               username: username,
+              
             ),
         '/MemberPage': (BuildContext context) => UserPage(
               username: username,
+              keldes: keldes,
+              id: id,
             ),
         '/MyHomePage': (BuildContext context) => Login(),
       },
@@ -62,7 +67,7 @@ class _LoginState extends State<Login> {
   // prosess button submit
   Future<List?> _login() async {
     final response = await http.post(
-        Uri.parse("http://192.168.43.71/ta_aplikasi_laima/login.php"),
+        Uri.parse("http://192.168.1.30/ta_aplikasi_laima/login.php"),
         body: {
           "username": user.text,
           "password": pass.text,
@@ -82,6 +87,8 @@ class _LoginState extends State<Login> {
 
       setState(() {
         username = datauser[0]['username'];
+        keldes = datauser[0]['keldes'];
+        id = datauser[0]['id'];
       });
     }
     if (formKey.currentState!.validate()) {

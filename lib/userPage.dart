@@ -6,11 +6,16 @@ import 'package:ta_aplikasi_laima/main.dart';
 import 'package:ta_aplikasi_laima/pln.dart';
 import 'package:ta_aplikasi_laima/police.dart';
 import 'package:ta_aplikasi_laima/profil.dart';
+import 'package:ta_aplikasi_laima/tentang_laima.dart';
 
 class UserPage extends StatelessWidget {
-  UserPage({this.username});
-
+  UserPage({this.username, this.keldes, this.id});
   final String? username;
+  final String? keldes;
+  final String? id;
+
+  List _get = [];
+  String id1 = '';
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +24,7 @@ class UserPage extends StatelessWidget {
         backgroundColor: Colors.green[700],
         title: const Text("Dashboard Laima"),
       ),
-    backgroundColor: Colors.green[100],
+      backgroundColor: Colors.green[100],
       drawer: Drawer(
         child: SingleChildScrollView(
           child: Column(
@@ -56,13 +61,6 @@ class UserPage extends StatelessWidget {
                 ),
               ),
               ListTile(
-                leading: const Icon(Icons.people),
-                title: const Text("Profil"),
-                onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => Profil()));
-                },
-              ),
-              ListTile(
                 leading: const Icon(Icons.home),
                 title: const Text("Dashboard"),
                 onTap: () {
@@ -72,7 +70,14 @@ class UserPage extends StatelessWidget {
               ListTile(
                 leading: const Icon(Icons.roofing),
                 title: const Text("Tentang"),
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => TentangLaima(),
+                    ),
+                  );
+                },
               ),
               ListTile(
                 leading: const Icon(Icons.logout),
